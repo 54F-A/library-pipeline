@@ -1,10 +1,9 @@
 # Site name
-site_name: DEL5 Data Engineering Product Development
+site_name: SITE NAME
 
 # Navigation menu
 nav:
   - Overview: index.md
-  - Architecture: architecture/index.md
 
 # Theme
 theme:
