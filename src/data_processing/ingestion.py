@@ -51,6 +51,7 @@ def load_csv(filepath, **kwargs):
         raise
 
 def load_json(filepath):
+
     """Load JSON file and flatten to DataFrame.
 
     Args:
@@ -93,3 +94,8 @@ def load_json(filepath):
     except Exception as e:
         logger.error(f"Error loading JSON {filepath}: {e}")
         raise
+
+def load_excel(filepath, sheet_name=0, **kwargs):
+    """Load Excel file into DataFrame."""
+    # TODO: Implement this
+    pass
