@@ -1,5 +1,7 @@
 # Library Data Pipeline
 
+![CI](https://github.com/54F-A/library-pipeline/actions/workflows/ci.yml/badge.svg)
+
 ## Project Overview
 [TODO: Describe the library's data quality problem]
 
