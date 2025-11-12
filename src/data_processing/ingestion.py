@@ -98,3 +98,6 @@ def load_excel(filepath, sheet_name=0, **kwargs):
     """Load Excel file into DataFrame."""
     # TODO: Implement this
     pass
+
+
+# Trigger the CI Workflow
