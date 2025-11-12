@@ -53,11 +53,22 @@ pytest tests/ -v --cov=src --cov-report=term-missing
 [TODO: Describe the data files]
 
 ## Testing
-[TODO: Document your testing approach]
 
-Current coverage: [TODO: Add coverage badge]
+This project uses **pytest** for automated testing:
+
+- **Unit tests**: Located in the `tests/` directory, these tests cover core pipeline functions such as data transformations and validation logic.
+- **Integration tests**: Validate end-to-end workflows, ensuring that raw data is correctly processed through the pipeline.
+- **Coverage**: Test coverage is measured with `pytest-cov` for all modules in `src/`. The CI workflow enforces a minimum coverage of 70%.
+
+To run tests locally:
+
+- pytest tests/ -v
+- pytest tests/ -v --cov=src --cov-report=term-missing
+
+Current coverage: [![Coverage](https://codecov.io/gh/54F-A/library-pipeline/branch/main/graph/badge.svg)](https://codecov.io/gh/54F-A/library-pipeline)
 
 ## CI/CD
+
 This project uses GitHub Actions for continuous integration.
 
 See [.github/workflows/ci.yml](.github/workflows/ci.yml)
