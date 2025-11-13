@@ -1,5 +1,10 @@
 # Library Data Pipeline
 
+![Teaching](https://img.shields.io/badge/module-DE5M5-blue)
+![Python Version](https://img.shields.io/badge/python-3.9--3.12-blue.svg)
+![Open Issues](https://img.shields.io/github/issues/54F-A//library-pipeline)
+![Open PRs](https://img.shields.io/github/issues-pr/54F-A//library-pipeline)
+![Last Commit](https://img.shields.io/github/last-commit/54F-A//library-pipeline)
 ![CI](https://github.com/54F-A/library-pipeline/actions/workflows/ci.yml/badge.svg)
 
 ## Project Overview
