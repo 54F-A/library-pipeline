@@ -3,10 +3,12 @@
 ![CI](https://github.com/54F-A/library-pipeline/actions/workflows/ci.yml/badge.svg)
 
 ## Project Overview
-[TODO: Describe the library's data quality problem]
+
+The `library-pipeline` project provides utilities to streamline data processing from raw ingestion to cleaned, analytics-ready datasets. It focuses on improving data quality, consistency, and reproducibility for library-related datasets.
 
 ## Architecture
-[TODO: Add architecture diagram]
+
+`Medallion Architecture`: The pipeline follows a **bronze → silver → gold** pattern, with notebooks and scripts to process, validate, and transform data.  
 
 See [docs/architecture/](docs/architecture/) for details.
 
@@ -19,11 +21,9 @@ At a prompt copy and paste the following 2 lines:
 ```sh
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-```
-
-*Replace the template text with your details.*
 
 ### Local Development
+
 ```bash
 # Clone this repository
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
@@ -47,10 +47,28 @@ pytest tests/ -v --cov=src --cov-report=term-missing
 ```
 
 ## Project Structure
-[TODO: Document your folder structure]
+
+**library-pipeline**/
+├─ data/                  # Raw and processed datasets
+├─ docs/                  # Documentation and diagrams
+├─ fabric/notebooks/      # Exported Fabric notebooks
+├─ project/               # Pipeline scripts
+├─ scripts/               # Utility scripts
+├─ src/                   # Core source code
+├─ tests/                 # Unit and integration tests
+├─ pyproject.toml         # Project configuration
+├─ requirements.txt       # Python dependencies
+└─ README.md              # Project documentation
+
 
 ## Data Sources
-[TODO: Describe the data files]
+
+The pipeline uses the following datasets:
+
+- `catalogue.xlsx` – Library catalog containing book metadata and classifications.
+- `circulation_data.csv` – Records of book checkouts and returns.
+- `events_data.json` – Library event schedules and attendee information.
+- `feedback.txt` – Raw user feedback and comments collected from library users.
 
 ## Testing
 
