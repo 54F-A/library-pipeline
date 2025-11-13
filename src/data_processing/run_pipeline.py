@@ -163,9 +163,9 @@ def run_pipeline():
 
     try:
         results['circulation'] = process_circulation_data()
-        # results['events'] = process_events_data()
+        results['events'] = process_events_data()
         # results['catalogue'] = process_catalogue_data()
-        # results['feedback'] = process_feedback_data()
+        results['feedback'] = process_feedback_data()
 
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
