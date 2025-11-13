@@ -16,10 +16,10 @@ See [docs/architecture/](docs/architecture/) for details.
 
 ## Git
 
-At a prompt copy and paste the following 2 lines:
-
 ```sh
 ### Local Development
+
+# At a prompt copy and paste the following 2 lines:
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
@@ -80,8 +80,6 @@ To run tests locally:
 
 - pytest tests/ -v
 - pytest tests/ -v --cov=src --cov-report=term-missing
-
-Current coverage: [![Coverage](https://codecov.io/gh/54F-A/library-pipeline/branch/main/graph/badge.svg)](https://codecov.io/gh/54F-A/library-pipeline)
 
 ## CI/CD
 
