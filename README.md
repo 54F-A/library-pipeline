@@ -19,12 +19,10 @@ See [docs/architecture/](docs/architecture/) for details.
 At a prompt copy and paste the following 2 lines:
 
 ```sh
+### Local Development
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
-### Local Development
-
-```bash
 # Clone this repository
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
@@ -47,7 +45,7 @@ pytest tests/ -v --cov=src --cov-report=term-missing
 ```
 
 ## Project Structure
-
+```
 **library-pipeline**/
 ├─ data/                  # Raw and processed datasets
 ├─ docs/                  # Documentation and diagrams
@@ -59,7 +57,7 @@ pytest tests/ -v --cov=src --cov-report=term-missing
 ├─ pyproject.toml         # Project configuration
 ├─ requirements.txt       # Python dependencies
 └─ README.md              # Project documentation
-
+```
 
 ## Data Sources
 
