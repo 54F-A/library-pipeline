@@ -1,4 +1,3 @@
-# Data cleaning functions
 """Data cleaning functions for library pipeline.
 
 This module contains functions for cleaning and standardizing data.
@@ -7,9 +6,9 @@ All functions return new DataFrames without modifying the input.
 
 import pandas as pd
 import logging
-from typing import List, Optional
 
 logger = logging.getLogger(__name__)
+
 
 def remove_duplicates(df, subset=None):
     """Remove duplicate rows from DataFrame.
@@ -35,6 +34,7 @@ def remove_duplicates(df, subset=None):
 
     return df
 
+
 def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
     """Handle missing values in DataFrame.
 
@@ -53,22 +53,22 @@ def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
     """
     df = df.copy()
 
-    if columns:
-        target_cols = columns
-    else:
-        target_cols = df.columns
-
+    target_cols = columns if columns else df.columns
     initial_rows = len(df)
 
     if strategy == 'drop':
         df = df.dropna(subset=target_cols)
-        logger.info(f"Dropped {initial_rows - len(df)} rows with missing values")
+        logger.info(
+            f"Dropped {initial_rows - len(df)} rows with missing values"
+        )
 
     elif strategy == 'fill':
         if fill_value is None:
             raise ValueError("fill_value must be provided when strategy='fill'")
         df[target_cols] = df[target_cols].fillna(fill_value)
-        logger.info(f"Filled missing values with {fill_value}")
+        logger.info(
+            f"Filled missing values with {fill_value}"
+        )
 
     elif strategy == 'forward_fill':
         df[target_cols] = df[target_cols].fillna(method='ffill')
@@ -78,6 +78,7 @@ def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
         raise ValueError(f"Unknown strategy: {strategy}")
 
     return df
+
 
 def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
     """Standardize date columns to consistent format.
@@ -104,7 +105,9 @@ def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
             df[col] = pd.to_datetime(df[col], errors='coerce')
             logger.info(f"Standardized dates in column: {col}")
         except Exception as e:
-            logger.error(f"Error standardizing dates in {col}: {e}")
+            logger.error(
+                f"Error standardizing dates in {col}: {e}"
+            )
             raise
 
     return df
